@@ -5,14 +5,12 @@ function scan(host, start, end, callback){
 	console.time('port scan time');
 	var count = end - start;
 	for(var i = start; i <= end; i++){
-		var item = net.connect({host:host,
-								port:i},
-								function(i){
-									return function(){
-										result.push(i);
-										this.destroy();
-									}
-								}(i));
+		var item = net.connect({host:host,port:i},function(i){
+					return function(){
+						result.push(i);
+						this.destroy();
+					}
+				}(i));
 		item.on('error',function(err){
 			if(err.errno === 'ECONNREFUSED')
 			{
