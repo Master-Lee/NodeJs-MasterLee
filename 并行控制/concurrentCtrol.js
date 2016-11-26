@@ -15,11 +15,10 @@ function checkIfComplete()       //当所有任务全部完成后，列出文件
 }
 
 function countWordsInText(text){
-	var words = text
-				.toString()
-				.toLowerCase()
-				.split(/\W+/)
-				.sort();
+	var words = text.toString()
+                  .toLowerCase()
+                  .split(/\W+/)
+                  .sort();
 
 	for (var index in words){
 		var word = words[index];

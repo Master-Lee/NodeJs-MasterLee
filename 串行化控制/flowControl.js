@@ -16,10 +16,9 @@ function readRSSFile(configFilename){
 	fs.readFile(configFilename, function(err,feedList){
 		if(err) return next(err);
 
-		feedList = feedList
-				.toString()
-				.replace(/^\s+|\s+$/g,'')
-				.split("\n");                            
+		feedList = feedList.toString()
+		  .replace(/^\s+|\s+$/g,'')
+			.split("\n");                            
 		var random = Math.floor(Math.random() * feedList.length);
 		next(null,feedList[random]);
 	});
