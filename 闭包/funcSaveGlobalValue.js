@@ -2,7 +2,6 @@
 function asyncFunction(callback){
 	setTimeout(callback, 200);
 }
-
 function asyncFunction2(callback){
 	setInterval(callback,200);
 }

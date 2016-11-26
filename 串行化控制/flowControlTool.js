@@ -1,5 +1,6 @@
 var flow = require('nimble');
 //函数数组，一个一个执行
+
 flow.series(
 [
 	function(callback){

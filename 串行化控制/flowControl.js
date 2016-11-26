@@ -2,7 +2,6 @@ var fs = require('fs');
 var request = require('request');
 var htmlparser = require('htmlparser');
 var configFilename = './rss_feeds.txt';      //确保包含RSS预订源URL列表的文件存在
-
 function checkForRSSFile(){
 	fs.exists(configFilename,function(exists){
 		if(!exists){
