@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script type="text/javascript">
+      var patt1=new RegExp("e");
+      document.write(patt1.test("I love you"));
+      document.write("<br /><br />");
+
+      var patt2=new RegExp("love");
+      document.write(patt2.exec("I love you"));
+      document.write("<br /><br />");
+
+      patt2.compile("you");
+      document.write(patt2.exec("I love you"));
+      document.write("<br /><br />");
+
+    </script>
+  </body>
+</html>

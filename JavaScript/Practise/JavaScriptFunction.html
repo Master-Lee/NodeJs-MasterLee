@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>求和</h1>
+    <label>数字1:</label>
+    <input id="num_one" type="text" name="number1">
+    <br /><br />
+    <label>数字2:</label>
+    <input id="num_two" type="text" name="number2">
+    <br /><br />
+    <label>和:</label>
+    <p id="sum"></p>
+
+    <button type="button" onclick="calculateSum()">求和</button>
+    <script type="text/javascript">
+      function calculateSum()
+      {
+        num1 = document.getElementById("num_one");
+        num2 = document.getElementById("num_two");
+        sum = document.getElementById("sum");
+
+        checkUserInput(num1.value,num2.value);
+
+        var result = parseInt(num1.value) + parseInt(num2.value);
+        sum.innerHTML=result;
+      }
+
+      function checkUserInput(num1,num2)
+      {
+        if(num1=="" || isNaN(num1))
+        {
+          alert("Input error!");
+          return;
+        }
+
+        if(num2=="" || isNaN(num2))
+        {
+          alert("Input error!");
+          return;
+        }
+      }
+    </script>
+  </body>
+</html>
